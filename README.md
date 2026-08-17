@@ -1,34 +1,34 @@
 # Pen Manufacturing Management System (PMMS)
 
-> **Course:** EES4317 - Object-Oriented Design and Programming  
-> **Task:** Tutor-Marked Assignment (TMA)  
+Course: EES4317 - Object-Oriented Design and Programming  
+Task: Tutor-Marked Assignment (TMA)  
 
 ---
 
 ## 📌 Project Overview
-The **Pen Manufacturing Management System (PMMS)** is a Java-based desktop application developed to model and streamline core operational workflows of a pen manufacturing plant. The system automates raw material handling, batch scheduling, quality control, sales processing, inventory management, and system report generation.
+This is a Java application built for the EES4317 TMA project. The system manages the basic operations of a pen manufacturing plant, such as tracking raw materials, scheduling production batches, quality checking, sales order processing, and generating system reports.
 
 ---
 
-## 🚀 Key Features & Modules
+## 🚀 Key Features
 
-- **Raw Material Management:** Track and update essential raw materials required for manufacturing.
-- **Production Batch Scheduling:** Schedule batch processes with automated material availability verification (`Verify material availability`).
-- **Quality Inspection & Inventory:** Perform quality assurance inspections (`Conduct Quality Inspection`) and update the finished goods inventory (`Update Finished Goods Inventory`).
-- **Sales Order & Invoicing:** Process customer orders and auto-generate transaction invoices (`Generate invoice`).
-- **System Reporting:** Generate asynchronous system performance and status reports using Java Multithreading.
+- **Raw Material Management:** Track and update stock levels for raw materials.
+- **Production Scheduling:** Create production batches and check material availability.
+- **Quality Control & Inventory:** Conduct quality inspections and update finished product inventory.
+- **Sales & Invoices:** Process customer orders and generate invoices.
+- **Reports:** Generate system activity reports using Java threads.
 
 ---
 
-## 🛠️ Object-Oriented Architecture & Design Patterns
+## 🛠️ OOP Concepts & Design Patterns Used
 
-This application is built adhering to strict **Object-Oriented Programming (OOP)** principles and software patterns:
+This project applies core Object-Oriented Programming (OOP) principles:
 
-* **Encapsulation:** All model properties (`Pen`, `Batch`, `Inventory`, `Order`) are safely encapsulated with appropriate access modifiers.
-* **Inheritance & Polymorphism:** Extended class structures for diverse pen models and dynamic behavioral execution.
-* **Abstraction:** Clean layer separation between business logic services, data models, and presentation interfaces (`PMMSInteractiveCLI`, `PMMSDashboard`).
-* **Design Patterns:** Implemented core software patterns (e.g., Singleton, Factory Method) to ensure high cohesion and low coupling.
-* **Multithreading:** Background execution threads for non-blocking report generation and system updates.
+* **Encapsulation:** Used private attributes with getters and setters in model classes (`Pen`, `Batch`, `Inventory`, `Order`).
+* **Inheritance & Polymorphism:** Extended classes for different pen types and dynamic behavior.
+* **Abstraction:** Separated business logic, data models, and user interfaces (`PMMSInteractiveCLI`, `PMMSDashboard`).
+* **Design Patterns:** Used software design patterns (like Singleton and Factory Method) for clean code organization.
+* **Multithreading:** Used background threads for running report tasks without freezing the app.
 
 ---
 
@@ -37,12 +37,12 @@ This application is built adhering to strict **Object-Oriented Programming (OOP)
 ```text
 pmms-tma-project/
 │
-├── exceptions/             # Custom application exception handling
-├── model/                  # Domain Entities & Data Models
-├── patterns/               # Implemented Software Design Patterns
-├── services/               # Core Business Logic & Workflow Managers
+├── exceptions/             # Custom exception classes
+├── model/                  # Data models (Pen, Batch, Inventory, etc.)
+├── patterns/               # Design pattern implementations
+├── services/               # Main business logic
 │
-├── PMMSApplication.java    # Application Entry Point
-├── PMMSDashboard.java      # Dashboard GUI / Main Runner
-├── PMMSInteractiveCLI.java # Interactive Command-Line Interface
-└── pmms_production.txt     # System Transaction & Production Log
+├── PMMSApplication.java    # Main entry point
+├── PMMSDashboard.java      # Dashboard GUI
+├── PMMSInteractiveCLI.java # Command line interface
+└── pmms_production.txt     # Log file
